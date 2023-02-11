@@ -38,8 +38,14 @@ print(len(res_list))
 
 with open('date_btcinusd.csv', 'w') as f:
     writer = csv.writer(f)
+    
     for item in res_dict['2021']:
         # print(item)
         writer.writerow(item)
     for item in res_dict['2022']:
         writer.writerow(item)
+
+#===========================================================================================================
+
+valid_calendar = work_days_calendar()
+print(f">>> {valid_calendar}")
